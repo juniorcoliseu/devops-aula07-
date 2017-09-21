@@ -11,6 +11,9 @@ def jogar(jogador, linha, coluna):
     raise RuntimeError('Linha inválida!')
   if coluna not in valores:
     raise RuntimeError('Coluna inválida!')
+  if TAB[linha][coluna] != ".":
+    raise RuntimeError('Coluna Ocupada')
+    
   TAB[linha][coluna] = jogador
 def tabuleiro():
   return TAB
